@@ -2,7 +2,7 @@ const axios = require("axios")
 
 const payload = {
     smvs_appointmentdatetime : "2021-01-29T08:30:00Z",
-    smvs_associatedclinicday : "566226d4-1562-eb11-a812-0022481e27b7",
+    smvs_associatedclinicday : "72caba2b-2e62-eb11-a812-0022481e27b7",
     smvs_associatedpatientid : "1ef7a561-ff61-eb11-a812-0022481e27b7"
 }
 
@@ -57,6 +57,8 @@ async function start() {
     console.log('Result --------------------------------------------------------');
 
     (ans).forEach(element => {
+
+        if(!elementvalue) console.log(element.value, '   reason:',element.data)
         console.log(element.value);  
     });
 }
